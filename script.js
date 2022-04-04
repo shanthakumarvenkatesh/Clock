@@ -68,6 +68,28 @@ function settime(){
     }    
     
     
-   
+   getOption();
 
 }
+function getOption() {
+
+
+    var e = document.getElementById("morning");
+    var text1 = e.options[e.selectedIndex].text;
+    
+    var f = document.getElementById("lunch");
+    var text2 = f.options[f.selectedIndex].text;
+    
+    var g = document.getElementById("nap");
+      var text3 = g.options[g.selectedIndex].text;
+     var h = document.getElementById("night");
+      var text4 = h.options[h.selectedIndex].text;
+    
+    
+         var idExist = document.getElementById("wakeUpTimeText");
+        if(idExist){
+            idExist.innerHTML = `Wake Up Time : ${text1} <br> Lunch Time : ${text2}<br> Nap Time : ${text3}<br>Night Time: ${text4}`;
+        }
+     
+    }
+    
